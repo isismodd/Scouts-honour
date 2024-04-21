@@ -1,0 +1,13 @@
+{
+  "$GMScript":"",
+  "%Name":"sq_transicao_in_Events3",
+  "isCompatibility":false,
+  "isDnD":false,
+  "name":"sq_transicao_in_Events3",
+  "parent":{
+    "name":"CodMushEditar",
+    "path":"CodMushEditar.yyp",
+  },
+  "resourceType":"GMScript",
+  "resourceVersion":"2.0",
+}
