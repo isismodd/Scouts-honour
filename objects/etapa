@@ -1,0 +1,57 @@
+/// @description Inserir descrição aqui
+// Você pode escrever seu código neste editor
+
+//Controlando o player
+var _floor = place_meeting(x, y + 1, obj_floor);
+
+if (global.transicao != false) exit;
+
+switch(estado)
+{
+	case "normal":
+	estado_normal();
+	break;
+	
+	case "in":
+	mudando_sprite(spr_player_idle)
+	if (image_index >= image_number - 0.5)
+	{
+		image_speed = 0;
+		image_index = image_number -1;
+		image_alpha = 0;
+	}
+	
+	break;
+	
+	case "out":
+	mudando_sprite(spr_player_idle)
+	
+	if (image_index >= image_number - 0.5)
+	{
+		estado = "normal";
+	}
+	break;
+	
+	case "dead":
+		mudando_sprite(spr_player_dead);
+		
+		timer_reinicia--;
+		
+		if(timer_reinicia <=0)
+		{
+			global.vida = global.max_vida;
+			game_restart();
+		}
+		
+		if(image_alpha < 1)
+	{
+		image_alpha += 0.1;
+	}
+	
+		if (image_index >= image_number - 1)
+	{
+		image_speed = 0;
+		image_index = image_number -1;
+	}
+	break;
+}
